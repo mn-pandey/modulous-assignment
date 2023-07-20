@@ -36,7 +36,7 @@ app.post('/login', (req, res) => {
   console.log(user)
 
   if (user) {
-    // Generate token and send it in the response
+    
     const token = generateToken({ firstname: user.firstname, lastname: user.lastname, email: user.email });
     res.status(200).json({ message: 'Login successful.', token });
   } else {
